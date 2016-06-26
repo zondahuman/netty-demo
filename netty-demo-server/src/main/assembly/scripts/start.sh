@@ -49,4 +49,4 @@ function exportClassPath(){
 exportClassPath
 
 
-nohup java -server -Xms4g -Xmx4g -Xss2m -XX:PermSize=512m -XX:MaxPermSize=512m -XX:NewRatio=2  -XX:+UseGCOverheadLimit -XX:-UseParallelGC -XX:ParallelGCThreads=24 -Dio.netty.leakDetection.level=advanced -Dim-client=$logFile   com.abin.lee.im.client.customer.strings.LoadStringServer >> $logFile  2>&1 &
+nohup java -server -Xms4g -Xmx4g -Xss2m -XX:PermSize=512m -XX:MaxPermSize=512m -XX:NewRatio=2  -XX:+UseGCOverheadLimit -XX:-UseParallelGC -XX:ParallelGCThreads=24 -Dio.netty.leakDetection.level=advanced -Dim-client=$logFile  com.netty.server.http.HttpFileServer >> $logFile  2>&1 &
