@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+        ">
+
+    <dubbo:application name="hello-world" />
+
+    <!-- 注冊地址-->
+    <dubbo:registry protocol="zookeeper" address="172.30.11.77:2181" />
+    <!--   -->
+    <!--<dubbo:registry address="multicast://224.5.6.7:1234" />-->
+
+    <!-- 用dubbo协议在20880端口暴露服务  -->
+    <dubbo:protocol name="dubbo" port="20880" />
+    <!-- Service interface Concurrent Control -->
+    <dubbo:service interface="com.jd.testdubbo.IProcessData"
+                   ref="demoService"/>
+    <!-- designate implementation -->
+    <bean id="demoService" class="com.jd.testdubbo.ProcessDataImpl" />
+
+</beans>
