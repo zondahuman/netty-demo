@@ -35,7 +35,7 @@
 
 
     <build>
-        <finalName>im-client</finalName>
+        <finalName>netty-demo-server</finalName>
         <sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
         <outputDirectory>${project.basedir}/target/classes</outputDirectory>
         <resources>
