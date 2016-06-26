@@ -17,7 +17,7 @@ case $response in
 esac
 
 ######check Router Process######
-SERVER_NAME="RouterServer"
+SERVER_NAME="HttpFileServer"
 PIDS=`ps -ef | grep $SERVER_NAME | grep -v "grep" | awk '{print $2}'`  
 echo "PIDS=$PIDS"
 if [ -z $PIDS ]; then  
